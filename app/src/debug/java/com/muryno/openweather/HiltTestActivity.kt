@@ -1,0 +1,8 @@
+package com.muryno.openweather
+
+import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
+
+
+@AndroidEntryPoint
+class HiltTestActivity : AppCompatActivity()

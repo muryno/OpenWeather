@@ -1,4 +1,4 @@
-package com.muryno.openweather
+package com.muryno.premiseweather
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
