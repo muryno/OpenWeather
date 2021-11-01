@@ -66,8 +66,7 @@ class WeatherViewModel @Inject constructor(
                 fetchCurrentWeatherFromApi.call(location).collect {
                     when (it) {
                         is Resource.Loading -> {
-                            // if it is empty, load else don't
-                            3
+                            _loading.postValue(true)
                         }
                         is Resource.Success -> {
                             withContext(Dispatchers.Main) {
@@ -111,7 +110,7 @@ class WeatherViewModel @Inject constructor(
                             withContext(Dispatchers.Main) {
                                 _loading.postValue(false)
                                 failure.postValue(true)
-                                ShowToast(it?.error?.message ?: "error occur")
+                                ShowToast(it.error.message ?: "error occur")
                             }
                         }
                     }

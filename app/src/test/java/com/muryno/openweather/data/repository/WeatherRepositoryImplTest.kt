@@ -7,7 +7,9 @@ import com.muryno.openweather.data.util.Resource
 import com.muryno.openweather.fakeData.Constants.location
 import com.muryno.openweather.fakeData.FakeComingDaysWeatherData
 import com.muryno.openweather.fakeData.FakeCurrentWeatherData
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test

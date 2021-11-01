@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import com.muryno.openweather.data.model.CurrentWeather
 import com.muryno.openweather.databinding.ActivityMainBinding
 import com.muryno.openweather.presenter.viewModel.WeatherViewModel
@@ -12,7 +11,6 @@ import com.muryno.openweather.utils.convertCelciusToFahrenheit
 import com.muryno.openweather.utils.getArtResourceForWeatherCondition
 import com.muryno.openweather.utils.getCurrentDate
 import dagger.hilt.android.AndroidEntryPoint
-import java.lang.String
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

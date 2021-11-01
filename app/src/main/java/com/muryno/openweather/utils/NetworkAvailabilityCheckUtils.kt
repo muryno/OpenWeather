@@ -13,12 +13,16 @@ class NetworkAvailabilityCheckUtils {
             val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
             val capabilities = cm?.getNetworkCapabilities(cm?.activeNetwork)
             if (capabilities != null) {
-                if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
-                    result = 2
-                } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
-                    result = 1
-                } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
-                    result = 3
+                when {
+                    capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> {
+                        result = 2
+                    }
+                    capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> {
+                        result = 1
+                    }
+                    capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN) -> {
+                        result = 3
+                    }
                 }
             }
             return result

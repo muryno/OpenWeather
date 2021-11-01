@@ -4,7 +4,9 @@
 
 
     <data>
+
         <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.muryno.openweather.presenter.viewModel.WeatherViewModel" />
@@ -13,27 +15,26 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
         <ImageView
-            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/background_image"
-            android:src="@drawable/bck"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/bck" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/overlay_color"/>
+            android:background="@color/overlay_color" />
 
-        <include
-            layout="@layout/content_activity"/>
+        <include layout="@layout/content_activity" />
 
         <include
             android:id="@+id/progressDialog"
-            android:visibility="gone"
-            layout="@layout/progress_dialog"/>
+            layout="@layout/progress_dialog"
+            android:visibility="gone" />
     </FrameLayout>
 </layout>

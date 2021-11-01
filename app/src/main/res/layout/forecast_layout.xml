@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-        <data>
-                <variable
-                    name="weatherData"
-                    type="com.muryno.openweather.data.model.WeatherData" />
-        </data>
+    <data>
 
-        <RelativeLayout
+        <variable
+            name="weatherData"
+            type="com.muryno.openweather.data.model.WeatherData" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/_gradient"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txt_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/_gradient">
-                <TextView
-                    android:id="@+id/txt_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="4dp"
-                    android:contentDescription="@string/current_time"
-                    android:layout_centerHorizontal="true"
-                    tools:text="Tues" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/current_time"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/white"
+            tools:text="Tues" />
 
-                <TextView
-                    android:id="@+id/txt_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/white"
-                    android:contentDescription="@string/current_date"
-                    android:layout_marginBottom="10dp"
-                    android:layout_below="@+id/txt_time"
-                    android:layout_centerHorizontal="true"
-                    tools:text="Tues" />
-                <ImageView
-                    android:id="@+id/cloud_image"
-                    android:scaleType="centerCrop"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:contentDescription="@string/art_cloud_image"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/txt_date"
-                    android:layout_gravity="center"
-                    android:src="@drawable/art_clouds"/>
-                <TextView
-                    android:id="@+id/cloud_condition"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/white"
-                    android:contentDescription="@string/cloud_condition"
-                    android:layout_marginBottom="10dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/cloud_image"
-                    tools:text="raining" />
-                <TextView
-                    android:id="@+id/txt_temperature"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="10dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/cloud_condition"
-                    tools:text="9" />
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/current_date"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            tools:text="Tues" />
+
+        <ImageView
+            android:id="@+id/cloud_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/txt_date"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:contentDescription="@string/art_cloud_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/art_clouds" />
+
+        <TextView
+            android:id="@+id/cloud_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cloud_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/cloud_condition"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            tools:text="raining" />
+
+        <TextView
+            android:id="@+id/txt_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cloud_condition"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            tools:text="9" />
+    </RelativeLayout>
 </layout>
