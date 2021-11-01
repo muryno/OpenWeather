@@ -58,7 +58,6 @@ fun getArtResourceForWeatherCondition(weatherId: Int?): Int {
 
 
 fun formatTemperature(temperature: Double): String? {
-    // For presentation, assume the user doesn't care about tenths of a degree.
     return App.instance?.getString(R.string.format_temperature)?.let { String.format(it, temperature * 1.8 + 32) }
 }
 
