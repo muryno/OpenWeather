@@ -30,7 +30,7 @@
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/edittext"
+                    android:id="@+id/location_input_field"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -42,6 +42,7 @@
                     android:visibility="visible"
                     />
                 <Button
+                    android:id="@+id/submit_button"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="0.3"
